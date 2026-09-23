@@ -1,0 +1,798 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Happy Birthday Siddhi ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet"
+    >
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js">
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="gradient-bg"></div>
+
+<div id="particles"></div>
+
+<div id="hearts-container"></div>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<button
+    id="musicBtn"
+    class="music-btn"
+>
+    🎵 Play Music
+</button>
+
+
+<audio
+    id="birthdayMusic"
+    loop
+>
+
+    <source
+        src="music/birthday.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero glass">
+
+    <div class="hero-content">
+
+        <h3 class="welcome-text">
+            A Special Surprise For My Sister
+        </h3>
+
+
+        <h1 class="name-title">
+            Siddhi ❤️
+        </h1>
+
+
+        <p class="hero-message">
+
+            To the most wonderful sister,
+            this little surprise is just for you.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <button
+                id="startBtn"
+                class="primary-btn"
+            >
+
+                Open Your Surprise 🎁
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BIRTHDAY LETTER
+===================================================== -->
+
+<section
+    id="messageSection"
+    class="section hidden"
+>
+
+    <div class="glass card">
+
+        <h2>
+            💌 A Letter For My Sister
+        </h2>
+
+
+        <p id="typingText"></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+<section class="section hidden">
+
+    <h2 class="section-title">
+
+        🎂 Counting Down To Your Birthday
+
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        September 24, 2026 ❤️
+
+    </p>
+
+
+    <div class="countdown-container glass">
+
+        <div class="count-item">
+
+            <span id="days">
+                0
+            </span>
+
+            <small>
+                Days
+            </small>
+
+        </div>
+
+
+        <div class="count-item">
+
+            <span id="hours">
+                0
+            </span>
+
+            <small>
+                Hours
+            </small>
+
+        </div>
+
+
+        <div class="count-item">
+
+            <span id="minutes">
+                0
+            </span>
+
+            <small>
+                Minutes
+            </small>
+
+        </div>
+
+
+        <div class="count-item">
+
+            <span id="seconds">
+                0
+            </span>
+
+            <small>
+                Seconds
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PHOTO GALLERY
+===================================================== -->
+
+<section class="section hidden">
+
+    <h2 class="section-title">
+
+        📸 Our Beautiful Memories
+
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        A collection of memories with my amazing sister ❤️
+
+    </p>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/image1.jpg"
+                alt="Sibling Memory 1"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/image2.jpg"
+                alt="Sibling Memory 2"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/image3.jpg"
+                alt="Sibling Memory 3"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/image4.jpg"
+                alt="Sibling Memory 4"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/image5.jpg"
+                alt="Sibling Memory 5"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/image6.jpg"
+                alt="Sibling Memory 6"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/image7.jpg"
+                alt="Sibling Memory 7"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="images/image8.jpg"
+                alt="Sibling Memory 8"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY YOU ARE SPECIAL
+===================================================== -->
+
+<section class="section hidden">
+
+    <h2 class="section-title">
+
+        ❤️ Why You're So Special
+
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Some things every brother secretly appreciates
+        about his sister.
+
+    </p>
+
+
+    <div class="cards-container">
+
+
+        <div
+            class="love-card glass"
+            onclick="showLoveMessage(
+                'Your smile can instantly make everyone around you happier. Never stop smiling, Siddhi! 😊'
+            )"
+        >
+
+            Your beautiful smile 😊
+
+        </div>
+
+
+        <div
+            class="love-card glass"
+            onclick="showLoveMessage(
+                'You may annoy me sometimes, but life would definitely be boring without you! 😂❤️'
+            )"
+        >
+
+            The way you annoy me 😂
+
+        </div>
+
+
+        <div
+            class="love-card glass"
+            onclick="showLoveMessage(
+                'No matter how much we fight, you will always have a brother who has your back. ❤️'
+            )"
+        >
+
+            Always having each other's back 🤝
+
+        </div>
+
+
+        <div
+            class="love-card glass"
+            onclick="showLoveMessage(
+                'Watching you grow into the person you are today makes me genuinely proud to call you my sister. 🌸'
+            )"
+        >
+
+            The person you've become 🌸
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="loveMessageBox"
+        class="glass love-message-box"
+    >
+
+        ❤️ Click any card above
+        to reveal a special message ❤️
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SIBLING JOURNEY
+===================================================== -->
+
+<section class="section hidden">
+
+    <h2 class="section-title">
+
+        🌸 Our Sibling Journey
+
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        From childhood memories to today,
+        we've come a long way.
+
+    </p>
+
+
+    <div class="timeline">
+
+
+        <!-- CHILDHOOD -->
+
+        <div class="timeline-item left">
+
+            <div
+                class="timeline-content glass timeline-click"
+                onclick="openMemoryGallery([
+                    'images/meeting1.jpg',
+                    'images/meeting2.jpg'
+                ])"
+            >
+
+                <h3>
+                    👶 Childhood
+                </h3>
+
+                <p>
+                    When our sibling story began.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GROWING UP -->
+
+        <div class="timeline-item right">
+
+            <div
+                class="timeline-content glass timeline-click"
+                onclick="openMemoryGallery([
+                    'images/chat1.jpg',
+                    'images/chat2.jpg'
+                ])"
+            >
+
+                <h3>
+                    👫 Growing Up Together
+                </h3>
+
+                <p>
+                    Countless conversations,
+                    fights, laughs and memories.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MEMORIES -->
+
+        <div class="timeline-item left">
+
+            <div
+                class="timeline-content glass timeline-click"
+                onclick="openMemoryGallery([
+                    'images/memory1.jpg',
+                    'images/memory2.jpg',
+                    'images/memory3.jpg'
+                ])"
+            >
+
+                <h3>
+                    📸 Beautiful Memories
+                </h3>
+
+                <p>
+                    The moments I'll always remember.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TODAY -->
+
+        <div class="timeline-item right">
+
+            <div
+                class="timeline-content glass timeline-click"
+                onclick="openMemoryGallery([
+                    'images/birthday1.jpg',
+                    'images/birthday2.jpg'
+                ])"
+            >
+
+                <h3>
+                    🎂 Today
+                </h3>
+
+                <p>
+                    Celebrating my amazing sister
+                    on her special day. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SISTER QUIZ
+===================================================== -->
+
+<section class="section hidden">
+
+    <div class="glass quiz-card">
+
+        <h2>
+            😂 Sister Quiz
+        </h2>
+
+
+        <h3 id="questionText">
+
+            Who is the more annoying sibling?
+
+        </h3>
+
+
+        <div class="quiz-options">
+
+
+            <button
+                onclick="checkAnswer(false)"
+            >
+
+                Obviously You 😂
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(true)"
+            >
+
+                Obviously Me 😇
+
+            </button>
+
+
+            <button
+                onclick="checkAnswer(false)"
+            >
+
+                We both are 😂
+
+            </button>
+
+
+        </div>
+
+
+        <div
+            id="quizResult"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BIRTHDAY GIFT
+===================================================== -->
+
+<section class="section hidden">
+
+    <h2 class="section-title">
+
+        🎁 Your Birthday Gift
+
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        I couldn't wrap up a real gift inside this
+        website, so here's a virtual one! 😄
+
+    </p>
+
+
+    <div
+        id="giftBox"
+        class="gift-box"
+    >
+
+        🎁
+
+    </div>
+
+
+    <div
+        id="giftMessage"
+        class="glass hidden"
+    >
+
+        <h2>
+
+            ❤️ For My Sister ❤️
+
+        </h2>
+
+
+        <p>
+
+            No material gift could ever match the
+            memories we've created together.
+
+            <br><br>
+
+            Thank you for being my sister,
+            my childhood partner-in-crime,
+            and someone I can always count on.
+
+            <br><br>
+
+            Keep smiling, keep dreaming,
+            and keep being you. 🌸
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CELEBRATION
+===================================================== -->
+
+<div
+    id="finalCelebration"
+    class="final-screen hidden"
+>
+
+    <h1>
+
+        Happy Birthday
+
+        <br>
+
+        Siddhi ❤️
+
+    </h1>
+
+
+    <h2>
+
+        To my amazing sister,
+
+        <br>
+
+        may your day be filled with
+        happiness, laughter and everything
+        you deserve! 🎂✨
+
+    </h2>
+
+
+    <p>
+
+        With lots of love,
+
+        <br>
+
+        Your Bhai ❤️
+
+    </p>
+
+</div>
+
+
+
+<!-- =====================================================
+     PHOTO LIGHTBOX
+===================================================== -->
+
+<div
+    id="lightbox"
+    class="lightbox"
+>
+
+    <span id="closeLightbox">
+        &times;
+    </span>
+
+
+    <img
+        id="lightboxImg"
+        src=""
+        alt="Memory"
+    >
+
+</div>
+
+
+
+<!-- =====================================================
+     MEMORY MODAL
+===================================================== -->
+
+<div
+    id="memoryModal"
+    class="memory-modal"
+>
+
+    <span id="closeMemoryModal">
+        &times;
+    </span>
+
+
+    <div
+        id="memoryGallery"
+        class="memory-gallery"
+    ></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    Made with ❤️
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="main.js"></script>
+
+
+</body>
+
+</html>
+
